@@ -1,0 +1,179 @@
+<?php
+
+defined('BASEPATH') or exit('No direct script access allowed');
+
+class Direktori extends CI_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Direktori_model');
+    }
+
+    public function get_akomodasi_all()
+    {
+        $data["hotel"] = $this->Direktori_model->get_akomodasi_all();
+        $this->load->view('pages/home/index', $data);
+    }
+
+    public function get_PMM_all()
+    {
+        $this->load->database();
+        $query = $this->db->query(' SELECT * FROM direktori
+        WHERE kategori = "PMM"');
+
+        echo json_encode($query->result());
+    }
+
+    public function get_DTW_all()
+    {
+        $this->load->database();
+        $query = $this->db->query(' SELECT * FROM direktori
+        WHERE kategori = "DTW"');
+
+        echo json_encode($query->result());
+    }
+
+    public function get_akomodasi_filter($kode_prov, $kode_kab, $nama_komersial)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT *
+		FROM direktori
+		WHERE kategori = "akomodasi" AND kode_prov = ? AND kode_kab = ? AND nama_komersial LIKE ?;',
+            array($kode_prov, $kode_kab, $nama_komersial)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_PMM_filter($kode_prov, $kode_kab, $nama_komersial)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT *
+		FROM direktori
+		WHERE kategori = "PMM" AND kode_prov = ? AND kode_kab = ? AND nama_komersial LIKE ?;',
+            array($kode_prov, $kode_kab, $nama_komersial)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_DTW_filter($kode_prov, $kode_kab, $nama_komersial)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT *
+		FROM direktori
+		WHERE kategori = "DTW" AND kode_prov = ? AND kode_kab = ? AND nama_komersial LIKE ?;',
+            array($kode_prov, $kode_kab, $nama_komersial)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_akomodasi_sekitar($kode_prov, $kode_kab)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT *
+            FROM direktori
+            WHERE kategori = "akomodasi" AND kode_prov = ? AND kode_kab = ?;',
+            array($kode_prov, $kode_kab)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_PMM_sekitar($kode_prov, $kode_kab)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT *
+            FROM direktori
+            WHERE kategori = "PMM" AND kode_prov = ? AND kode_kab = ?;',
+            array($kode_prov, $kode_kab)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_DTW_sekitar($kode_prov, $kode_kab)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT *
+            FROM direktori
+            WHERE kategori = "DTW" AND kode_prov = ? AND kode_kab = ?;',
+            array($kode_prov, $kode_kab)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_ringkas_akomodasi($kode_prov, $nama_prov)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT kode_prov, nama_prov, 
+            COUNT(id) AS jumlah 
+            FROM `direktori` 
+            WHERE kategori = "akomodasi" 
+            GROUP BY kode_prov;',
+            array($kode_prov, $nama_prov)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_ringkas_PMM($kode_prov, $nama_prov)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT kode_prov, nama_prov, 
+            COUNT(id) AS jumlah 
+            FROM `direktori` 
+            WHERE kategori = "PMM" 
+            GROUP BY kode_prov;',
+            array($kode_prov, $nama_prov)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_ringkas_DTW($kode_prov, $nama_prov)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT kode_prov, nama_prov, 
+            COUNT(id) AS jumlah 
+            FROM `direktori` 
+            WHERE kategori = "DTW" 
+            GROUP BY kode_prov;',
+            array($kode_prov, $nama_prov)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_ringkas_data_direktori($kode_prov, $nama_prov, $kategori)
+    {
+        $this->load->database();
+        $query = $this->db->query(
+            'SELECT kode_prov, nama_prov, kategori, 
+            COUNT(id) AS jumlah 
+            FROM `direktori` 
+            GROUP BY kode_prov, kategori;',
+            array($kode_prov, $nama_prov, $kategori)
+        );
+
+        echo json_encode($query->result());
+    }
+
+    public function get_search($kode_prov, $kode_kab, $kategori, $nama_komersial)
+    {
+        echo json_encode($this->Direktori_model->get_search($kode_prov, $kode_kab, $kategori, $nama_komersial)->result());
+        // echo $data["hotel"].toD;
+    }
+}

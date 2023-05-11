@@ -1,0 +1,476 @@
+<div class="hero-wrap js-fullheight" style="background-image: url('assets/images/jasaAkomodasi/jasa-akomodasi-1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+            <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>Temukan hotel terbaik<br></strong> impian Anda</h1>
+                <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Banyak pilihan dan jenis hotel disini</p>
+                <div class="block-17 my-4">
+                    <form action="" method="post" class="d-block d-flex">
+                        <div class="fields d-block d-flex">
+                            <div class="textfield-search one-third">
+                                <input type="text" class="form-control" placeholder="Kode Provinsi">
+                            </div>
+                            <div class="textfield-search one-third">
+                                <input type="text" class="form-control" placeholder="Kode Kabupaten">
+                            </div>
+                            <div class="textfield-search one-third">
+                                <input type="text" class="form-control" placeholder="Klasifikasi Usaha">
+                            </div>
+                        </div>
+                        <a type="submit" class="search-submit btn btn-primary" href="<?= base_url('jasa_akomodasi_search_result'); ?>">Cari</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <h2 class="mb-4"><strong>Rekomendasi</strong> Jasa Akomodasi</h2>
+                <span class="subheading">Temukan pilihan terbaik untuk setiap informasi penginapan yang Anda butuhkan</span>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm col-md-6 col-lg ftco-animate">               
+                <div class="destination">
+                    <a href="<?= base_url('jasa_akomodasi_detail'); ?>" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(assets/images/jasaAkomodasi/jasa-akomodasi-2.jpg);">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <div class="d-flex">
+                            <div class="one">
+                                <h3><a href="<?= base_url('jasa_akomodasi_detail'); ?>"></a></h3>
+                                <p class="rate">
+                                    <span>Kode pos : </span>
+                                </p>
+                            </div>
+                        </div>
+                        <p>Alamat Akomodasi
+                            <hr>
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-contact_phone"></i> No. Telephone</span>
+                            <span class="ml-auto"><a href="<?= base_url('jasa_akomodasi_detail'); ?>">Lihat</a></span>
+                        </p>
+                    </div>
+                </div>                 
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- <section class="ftco-section ftco-destination">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section-2 ftco-animate">
+                <h2 class="mb-4"><strong>Jasa Akomodasi</strong></h2>
+                <span class="subheading-2">Jelajahi beragam pilihan tempat penginapan dengan berbagai fasilitas untuk liburan yang berkenang</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="destination-slider owl-carousel ftco-animate">
+                    <?php foreach ($akomodasi_all->data as $akomodasiAll) { ?>
+                        <div class="item">
+                            <div class="destination">
+                                <a href="<?= base_url('jasa_akomodasi_detail'); ?>" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(assets/images/jasaAkomodasi/jasa-akomodasi-2.jpg);">
+                                    <div class="icon d-flex justify-content-center align-items-center">
+                                        <span class="icon-search2"></span>
+                                    </div>
+                                </a>
+                                <div class="text p-3">
+                                    <div class="d-flex">
+                                        <div class="one">
+                                            <h3><a href="<?= base_url('jasa_akomodasi_detail'); ?>"><?= $akomodasiAll->nama_komersial ?></a></h3>
+                                            <p class="rate">
+                                                <span>Kode pos : <?= $akomodasiAll->kodepos ?></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p><?= $akomodasiAll->alamat_jalan ?>
+                                        <hr>
+                                    <p class="bottom-area d-flex">
+                                        <span><i class="icon-contact_phone"></i> <?= $akomodasiAll->no_telp ?></span>
+                                        <span class="ml-auto"><a href="<?= base_url('jasa_akomodasi_detail'); ?>">Lihat</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 sidebar">
+                <div class="sidebar-wrap bg-light ftco-animate">
+                    <h3 class="heading mb-4">Find City</h3>
+                    <form action="#">
+                        <div class="fields">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Destination, City">
+                            </div>
+                            <div class="form-group">
+                                <div class="select-wrap one-third">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="" id="" class="form-control" placeholder="Keyword search">
+                                        <option value="">Select Location</option>
+                                        <option value="">San Francisco USA</option>
+                                        <option value="">Berlin Germany</option>
+                                        <option value="">Lodon United Kingdom</option>
+                                        <option value="">Paris Italy</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="checkin_date" class="form-control" placeholder="Date from">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="checkin_date" class="form-control" placeholder="Date to">
+                            </div>
+                            <div class="form-group">
+                                <div class="range-slider">
+                                    <span>
+                                        <input type="number" value="25000" min="0" max="120000" /> -
+                                        <input type="number" value="50000" min="0" max="120000" />
+                                    </span>
+                                    <input value="1000" min="0" max="120000" step="500" type="range" />
+                                    <input value="50000" min="0" max="120000" step="500" type="range" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap bg-light ftco-animate">
+                    <h3 class="heading mb-4">Star Rating</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-4 ftco-animate">
+                        <div class="destination">
+                            <a href="<?= base_url('hotel_single'); ?>" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(assets/images/hotel-1.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="<?= base_url('hotel_single'); ?>">Hotel, Italy</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>8 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$40<br><small>/night</small></span>
+                                    </div>
+                                </div>
+                                <p>Far far away, behind the word mountains, far from the countries</p>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Miami, Fl</span>
+                                    <span class="ml-auto"><a href="#">Book Now</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                        <div class="destination">
+                            <a href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(assets/images/hotel-2.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>8 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$40<br><small>/night</small></span>
+                                    </div>
+                                </div>
+                                <p>Far far away, behind the word mountains, far from the countries</p>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Miami, Fl</span>
+                                    <span class="ml-auto"><a href="#">Book Now</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                        <div class="destination">
+                            <a href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(assets/images/hotel-3.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>8 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$40<br><small>/night</small></span>
+                                    </div>
+                                </div>
+                                <p>Far far away, behind the word mountains, far from the countries</p>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Miami, Fl</span>
+                                    <span class="ml-auto"><a href="#">Book Now</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                        <div class="destination">
+                            <a href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(assets/images/hotel-4.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>8 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$40<br><small>/night</small></span>
+                                    </div>
+                                </div>
+                                <p>Far far away, behind the word mountains, far from the countries</p>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Miami, Fl</span>
+                                    <span class="ml-auto"><a href="#">Book Now</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                        <div class="destination">
+                            <a href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(assets/images/hotel-5.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>8 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$40<br><small>/night</small></span>
+                                    </div>
+                                </div>
+                                <p>Far far away, behind the word mountains, far from the countries</p>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Miami, Fl</span>
+                                    <span class="ml-auto"><a href="#">Book Now</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                        <div class="destination">
+                            <a href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(assets/images/hotel-6.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>8 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$40<br><small>/night</small></span>
+                                    </div>
+                                </div>
+                                <p>Far far away, behind the word mountains, far from the countries</p>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Miami, Fl</span>
+                                    <span class="ml-auto"><a href="#">Book Now</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center">
+                        <div class="block-27">
+                            <ul>
+                                <li><a href="#">&lt;</a></li>
+                                <li class="active"><span>1</span></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&gt;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .col-md-8 -->
+        </div>
+    </div>
+</section> <!-- .section -->
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <h2 class="mb-4"><strong>Layanan</strong> Lain</h2>
+                <span class="subheading">Ada layanan lain yang mungkin Anda cari juga</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div id="accordion">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" href="<?= base_url('penyedia_makan_dan_minum_search'); ?>"><strong>Penyedia Makan dan Minum </strong><span class="collapsed"><i class="icon-restaurant_menu"></i></span></a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" href="<?= base_url('daya_tarik_wisata_search'); ?>"><strong>Daya Tarik Wisata </strong><span class="collapsed"><i class="icon-nature"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" href="<?= base_url('penunjang_pariwisata_search'); ?>"><strong>Penunjang Pariwisata </strong><span class="collapsed"><i class="icon-cab"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section-parallax">
+    <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <h2>Ada Pertanyaan?</h2>
+                    <p>Hubungi saja kami dengan mengakses halaman berikut</p>
+                    <div class="row d-flex justify-content-center mt-5">
+                        <div class="col-md-5">
+                            <form action="#" class="subscribe-form">
+                                <div class="form-group">
+                                    <a type="submit" href="<?= base_url('tentang'); ?>" class="btn submit px-5">Klik Aku</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
